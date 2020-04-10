@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "673080872721",
+    "firebase_url": "https://risk-assessment-1561a.firebaseio.com",
+    "project_id": "risk-assessment-1561a",
+    "storage_bucket": "risk-assessment-1561a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673080872721:android:38162e0a81201a393a06b0",
+        "android_client_info": {
+          "package_name": "bme.project.fmea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "673080872721-asii94126mm6q3a204544q178gkvij2g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bme.project.fmea",
+            "certificate_hash": "796d35adc4f3f08d865dd788ef75d2a394ed444d"
+          }
+        },
+        {
+          "client_id": "673080872721-93m2ik3q9os6g064hprp4smtg0sl8h9s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQdzkfCfi3YezkqE_aMQ36lk6kDG5aTJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "673080872721-93m2ik3q9os6g064hprp4smtg0sl8h9s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
