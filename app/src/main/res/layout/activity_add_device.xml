@@ -79,6 +79,7 @@
             android:text="@string/purchase_date" />
 
         <DatePicker
+            android:id="@+id/datePicker"
             style="@android:style/Widget.DatePicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -139,12 +140,27 @@
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.button.MaterialButton
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/add"
-            app:backgroundTint="@color/colorPrimary"
-            android:theme="@style/Theme.MaterialComponents" />
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/add"
+                android:theme="@style/Theme.MaterialComponents"
+                app:backgroundTint="@color/colorPrimary" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+                android:visibility="gone" />
+        </FrameLayout>
+
     </LinearLayout>
 </ScrollView>

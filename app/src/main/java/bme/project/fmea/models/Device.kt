@@ -4,7 +4,7 @@ import java.util.*
 
 data class Device(
     val name: String,
-    val price: Double,
+    val price: String,
     val model: String,
     val department: String,
     val serviceContract: String,
