@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FMEA</string>
+    <string name="devices">المعدات</string>
+    <string name="analysis">التحليلات</string>
+
+</resources>

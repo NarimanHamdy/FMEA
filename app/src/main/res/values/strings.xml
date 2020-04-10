@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FMEA</string>
+    <string name="devices">Devices</string>
+    <string name="analysis">Analysis</string>
+</resources>
