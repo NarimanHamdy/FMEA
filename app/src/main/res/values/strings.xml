@@ -2,4 +2,15 @@
     <string name="app_name">FMEA</string>
     <string name="devices">Devices</string>
     <string name="analysis">Analysis</string>
+    <string name="name">Name</string>
+    <string name="model">Model</string>
+    <string name="price">Purchasing Price</string>
+    <string name="department">Department</string>
+    <string name="service_contract">Type of Service Contract</string>
+    <string name="full">Full</string>
+    <string name="partial">Partial</string>
+    <string name="purchase_date">Purchasing Date</string>
+    <string name="brand">Brand</string>
+    <string name="price_of_service_contract">Price Of Service Contract</string>
+    <string name="add">Add</string>
 </resources>
