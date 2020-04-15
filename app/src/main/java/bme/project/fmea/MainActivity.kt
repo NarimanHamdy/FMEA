@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import bme.project.fmea.adddevice.AddDeviceActivity
+import bme.project.fmea.analysis.AnalysisFragment
 import bme.project.fmea.showdevices.ShowDevicesFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private var currentFragment: String? = null
 
     private val devicesFragment = ShowDevicesFragment()
+    private val analysisFragment = AnalysisFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                     showFragment(devicesFragment, DEVICE_FRAGMENT)
                 }
                 getString(R.string.analysis) -> {
-
+                    showFragment(analysisFragment, ANALYSIS_FRAGMENT)
                 }
             }
             return@setOnNavigationItemSelectedListener true
