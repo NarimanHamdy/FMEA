@@ -1,11 +1,13 @@
 package bme.project.fmea.showdevices
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import bme.project.fmea.DEVICES_DOCUMENT
 import bme.project.fmea.R
+import bme.project.fmea.devicedetails.ShowDeviceDetailsActivity
 import bme.project.fmea.ext.gone
 import bme.project.fmea.ext.toast
 import bme.project.fmea.ext.visible
@@ -16,8 +18,13 @@ import java.lang.Exception
 
 class ShowDevicesFragment : Fragment(R.layout.fragment_show_devices) {
 
-    private val adapter = DevicesAdapter {
-        // TODO
+    private val adapter = DevicesAdapter { device ->
+        context?.let {
+            val intent = Intent(it, ShowDeviceDetailsActivity::class.java).apply {
+                putExtra("device", device)
+            }
+            startActivity(intent)
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -53,7 +60,6 @@ class ShowDevicesFragment : Fragment(R.layout.fragment_show_devices) {
             }
             .addOnSuccessListener {
                 val devices = it.toObjects(Device::class.java)
-                Log.d("TAG", "devices : $devices")
                 adapter.submitList(it.toObjects(Device::class.java))
             }
     }

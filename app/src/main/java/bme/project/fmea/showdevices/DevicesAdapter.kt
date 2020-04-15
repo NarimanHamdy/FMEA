@@ -28,10 +28,8 @@ class DevicesAdapter(private val onItemClicked: (Device) -> Unit) :
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun onBind(item: Device, onItemClicked: (Device) -> Unit) {
-            itemView.setOnClickListener {
-                onItemClicked(item)
-            }
             itemView.apply {
+                card.setOnClickListener { onItemClicked(item) }
                 tvName.text = item.name
                 tvBrand.text = item.brand
                 tvModel.text = item.model

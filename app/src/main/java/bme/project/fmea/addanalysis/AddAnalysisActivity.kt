@@ -12,9 +12,9 @@ class AddAnalysisActivity : AppCompatActivity() {
 
         title = "Add New Analysis"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)zz
-    }zz
-    zz
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return super.onSupportNavigateUp()

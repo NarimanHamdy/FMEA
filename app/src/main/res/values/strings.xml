@@ -13,4 +13,12 @@
     <string name="brand">Brand</string>
     <string name="price_of_service_contract">Price Of Service Contract</string>
     <string name="add">Add</string>
+    <string name="name_value" translatable="false">Name: %1$s</string>
+    <string name="department_value" translatable="false">Department: %1$s</string>
+    <string name="brand_value" translatable="false">Brand: %1$s</string>
+    <string name="model_value" translatable="false">Model: %1$s</string>
+    <string name="purchasing_date_value" translatable="false">Purchasing Date: %1$s</string>
+    <string name="purchasing_price_value" translatable="false">Purchasing Price: %1$s</string>
+    <string name="type_of_contract_value" translatable="false">Type Of Service Contract: %1$s</string>
+    <string name="price_of_contract_value" translatable="false">Price of Service Contract: %1$s</string>
 </resources>
