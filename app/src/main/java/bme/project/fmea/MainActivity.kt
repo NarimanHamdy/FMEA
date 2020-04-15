@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import bme.project.fmea.addanalysis.AddAnalysisActivity
 import bme.project.fmea.adddevice.AddDeviceActivity
 import bme.project.fmea.analysis.AnalysisFragment
 import bme.project.fmea.showdevices.ShowDevicesFragment
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         fabAdd.setOnClickListener {
             if (bottomNav.selectedItemId == R.id.nav_devices) {
                 startActivity(Intent(this, AddDeviceActivity::class.java))
+            } else {
+                startActivity(Intent(this, AddAnalysisActivity::class.java))
             }
         }
         bottomNav.setOnNavigationItemSelectedListener {
