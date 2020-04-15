@@ -37,7 +37,7 @@ class AddDeviceActivity : AppCompatActivity() {
                     }
                     .addOnSuccessListener {
                         setResult(Activity.RESULT_OK)
-//                        finish()
+                        finish()
                     }
                     .addOnFailureListener(this::showFailure)
             }
