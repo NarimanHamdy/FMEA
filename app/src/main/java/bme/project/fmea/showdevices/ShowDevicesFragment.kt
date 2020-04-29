@@ -2,10 +2,9 @@ package bme.project.fmea.showdevices
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
-import bme.project.fmea.DEVICES_DOCUMENT
+import bme.project.fmea.DEVICES_COLLECTION
 import bme.project.fmea.R
 import bme.project.fmea.devicedetails.ShowDeviceDetailsActivity
 import bme.project.fmea.ext.gone
@@ -51,7 +50,7 @@ class ShowDevicesFragment : Fragment(R.layout.fragment_show_devices) {
     }
 
     private fun getData() {
-        FirebaseFirestore.getInstance().collection(DEVICES_DOCUMENT).get()
+        FirebaseFirestore.getInstance().collection(DEVICES_COLLECTION).get()
             .addOnCompleteListener {
                 endLoading()
             }
@@ -59,8 +58,10 @@ class ShowDevicesFragment : Fragment(R.layout.fragment_show_devices) {
                 showFailure(it)
             }
             .addOnSuccessListener {
-                val devices = it.toObjects(Device::class.java)
-                adapter.submitList(it.toObjects(Device::class.java))
+                val data = it.documents.map {
+                    it.toObject(Device::class.java)!!.apply { path = it.reference.path }
+                }
+                adapter.submitList(data)
             }
     }
 }

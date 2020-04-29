@@ -9,10 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".devicedetails.ShowDeviceDetailsActivity"></activity>
-        <activity android:name=".addanalysis.AddAnalysisActivity" />
-        <activity android:name=".adddevice.AddDeviceActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".devicedetails.ShowDeviceDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".addanalysis.AddAnalysisActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".adddevice.AddDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

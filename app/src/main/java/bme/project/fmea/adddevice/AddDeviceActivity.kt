@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatEditText
-import bme.project.fmea.DEVICES_DOCUMENT
+import bme.project.fmea.DEVICES_COLLECTION
 import bme.project.fmea.R
 import bme.project.fmea.ext.gone
 import bme.project.fmea.ext.visible
@@ -31,7 +31,7 @@ class AddDeviceActivity : AppCompatActivity() {
             createDevice()?.let {
                 startLoading()
 
-                FirebaseFirestore.getInstance().collection(DEVICES_DOCUMENT).document().set(it)
+                FirebaseFirestore.getInstance().collection(DEVICES_COLLECTION).document().set(it)
                     .addOnCompleteListener {
                         endLoading()
                     }

@@ -2,8 +2,10 @@ package bme.project.fmea.models
 
 import android.os.Parcelable
 import androidx.recyclerview.widget.DiffUtil
+import com.google.firebase.firestore.Exclude
 import kotlinx.android.parcel.Parcelize
 import java.util.*
+import kotlin.collections.ArrayList
 
 @Parcelize
 data class Device(
@@ -14,7 +16,9 @@ data class Device(
     val serviceContract: String = "",
     val purchaseDate: Date = Date(),
     val brand: String = "",
-    val priceOfServiceContract: String = ""
+    val priceOfServiceContract: String = "",
+    val downTimes: ArrayList<DownTime> = arrayListOf(),
+    @get:Exclude var path: String = ""
 ) : Parcelable {
     companion object : DiffUtil.ItemCallback<Device>() {
         override fun areItemsTheSame(oldItem: Device, newItem: Device): Boolean {
